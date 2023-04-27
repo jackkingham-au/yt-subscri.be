@@ -58,7 +58,7 @@ const SubscribeLink = () => {
                 </figure>
                 <p>People who click the subscribe link, can simply confirm their subscription, and be subscribed.</p>
                 <hr className="my-4" />
-                <h2 className="text-3xl font-bold mb-4 text-gray-600">How can I test this works?</h2>
+                <h2 className="text-3xl font-bold mb-4 text-gray-600" id="testLink">How can I test this works?</h2>
                 <p>There may be cases where this link will not work. To test this link, you can open an <a href="https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop" target='_blank' className='text-red-500 underline' rel="noopener noreferrer">"Incogntio Mode" browser</a>. Follow the link in the browser, and you should see a confirmation link when the page is fully loaded.</p>
             </section>  
         </>

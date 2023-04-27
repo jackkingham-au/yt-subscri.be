@@ -8,19 +8,27 @@ const URLSubscribe = () => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(false);
     const [copied, setCopied] = useState(false)
+    const [error, setError] = useState(false);
 
     const submit = (e) => {
         e.preventDefault();
 
+        setError(false);
         setCopied(false);
         setLoading(true);
 
         const fields = getFields(e.target);
 
         getSubscribeLink(fields.channel).then(url => {
-            setResult(url)
+            if(url) {
+                setResult(url)
+            } else {
+                setError(true);
+            }
+
             setLoading(false);
         }).catch(error => {
+            setError(true);
             setLoading(false);
         })
     }
@@ -71,6 +79,13 @@ const URLSubscribe = () => {
                 </button>
             </form>
             {
+                (error) 
+                ? <>
+                    <h5 className="bg-red-400 font-medium my-8 p-4 rounded-md text-white">🚫 There was an error converting the URL given. Check the URL is a YouTube Channel URL.</h5>
+                </>
+                : ''
+            }
+            {
                 (result) 
                 ? <>
                      <div className="flex items-center my-8">
@@ -90,6 +105,10 @@ const URLSubscribe = () => {
                             </> 
                         }
                     </button>
+                    <a href={'https://' + result} target="_blank" rel="noopener noreferrer" className="text-violet-500 font-bold uppercase outline-none text-lg mx-4 inline-block">
+                        View Link
+                    </a>
+                    <p className="text-gray-400 m-4 text-sm">🧪 You should <a href="/subscribe-link#testLink" className='text-gray-500 underline'>test the link</a> in "Incognito Mode" in your browser.</p>
                 </>
                 : ''
             }
