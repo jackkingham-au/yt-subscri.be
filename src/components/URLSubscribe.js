@@ -3,15 +3,19 @@ import { copyText } from '@/helpers/copy';
 import React, { useState } from 'react';
 import { getSubscribeLink } from '@/helpers/url';
 import Image from 'next/image';
+import { usePlausible } from 'next-plausible';
 
 const URLSubscribe = () => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(false);
     const [copied, setCopied] = useState(false)
     const [error, setError] = useState(false);
+    const plausible = usePlausible();
 
     const submit = (e) => {
         e.preventDefault();
+
+        plausible('[SUBMIT] - Subscribe URL');
 
         setError(false);
         setCopied(false);

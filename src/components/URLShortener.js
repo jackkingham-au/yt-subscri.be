@@ -2,6 +2,8 @@ import { getFields } from '@/helpers/forms';
 import { shortenUrl } from '@/helpers/url';
 import { copyText } from '@/helpers/copy';
 import React, { useState } from 'react';
+import {usePlausible} from 'next-plausible'
+
 
 const URLShortener = () => {
     const [timestamp, setTimestamp] = useState(true);
@@ -10,9 +12,12 @@ const URLShortener = () => {
     const [embed, setEmbed] = useState(false);
     const [embedStart, setEmbedStart] = useState(0);
     const [error, setError] = useState(false);
+    const plausible = usePlausible()
 
     const submit = (e) => {
         e.preventDefault();
+
+        plausible('[SUBMIT] - Shorten URL');
 
         setCopied(false);
         setError(false);
