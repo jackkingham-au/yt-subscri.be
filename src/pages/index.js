@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { usePlausible } from 'next-plausible';
 
 const Home = () => {
+    const plausible = usePlausible();
+
     return (
         <>
             <Head>
@@ -29,14 +32,14 @@ const Home = () => {
                     <hr className="w-full my-2" />
                     <h3 className='text-xl font-medium my-4'>YouTube Subscribe Link Tool</h3>
                     <p>Use the Subscribe Link tool to create an automatic subscribe link for your YouTube Channel.</p>
-                    <a href="/subscribe-link" className="text-violet-500 p-4 block my-2 text-lg font-bold uppercase hover:bg-gray-200 rounded-md">View Tool</a>
+                    <a onClick={() => plausible('[CLICK] - Subscribe Tool')} href="/subscribe-link" className="text-violet-500 p-4 block my-2 text-lg font-bold uppercase hover:bg-gray-200 rounded-md">View Tool</a>
                 </div>
                 <div className="lg:h-[320px] text-center border-2 p-4 rounded-md m-4 w-full lg:w-[50%]">
                     <Image src="/assets/svg/shorten-link-tool.svg" alt="Shorten Link Tool" width={200} height={200} className='mx-auto h-[90px] scale-150' />
                     <hr className="w-full my-2" />
                     <h3 className='text-xl font-medium my-4'>YouTube Link Shortener Tool</h3>
                     <p>Use the Link Shortener tool to reduce the length of your YouTube Video URL.</p>
-                    <a href="/link-shortener" className="text-violet-500 p-4 block my-2 text-lg font-bold uppercase hover:bg-gray-200 rounded-md">View Tool</a>
+                    <a onClick={() => plausible('[CLICK] - Shorten Tool')} href="/link-shortener" className="text-violet-500 p-4 block my-2 text-lg font-bold uppercase hover:bg-gray-200 rounded-md">View Tool</a>
                 </div>
             </section>
             <hr className="my-4" />
