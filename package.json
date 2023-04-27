@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "CI=false && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "devBuild": "next build"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
