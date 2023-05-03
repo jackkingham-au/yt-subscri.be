@@ -17,7 +17,7 @@ const Post = ({source, meta, slug}) => {
                 <meta property="og:url" content={'https://yt-subscri.be/blog/' + slug} />
                 <meta property='og:description' content={description} />                
                 <meta name="description" content={description} />
-                <title>{title} | yt-subscri.be</title>
+                <title>{title + ' | yt-subscri.be'}</title>
                 <script type="application/ld+json">
                     {
                         JSON.stringify(
