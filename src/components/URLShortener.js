@@ -76,7 +76,7 @@ const URLShortener = () => {
                         <label htmlFor="loop" className='text-lg font-medium mr-4'>Loop the video?</label>
                     </div> */}
                 </section>
-                <button type="submit" className='py-4 px-8 my-8 bg-violet-500 text-white outline-none text-lg font-bold uppercase rounded-md'>Shorten YouTube Link</button>
+                <button type="submit" className='py-4 px-8 my-8 bg-blue-500 text-white outline-none text-lg font-bold uppercase rounded-md'>Shorten YouTube Link</button>
             </form>
             {
                 (error) 
@@ -110,7 +110,7 @@ const URLShortener = () => {
                     <section className="p-4 rounded-md m-4 bg-slate-700 text-gray-300">
                         <h4 className='text-xl my-2 text-green-400'>{result}</h4>
                     </section>   
-                    <button onClick={() => copyUrl()} className="text-violet-500 font-bold uppercase outline-none text-lg mx-4">
+                    <button onClick={() => copyUrl()} className="text-blue-500 font-bold uppercase outline-none text-lg mx-4">
                         {
                             (copied)
                             ? '✔ Link Copied'
@@ -120,7 +120,7 @@ const URLShortener = () => {
                             </> 
                         }
                     </button>
-                    <a href={'https://' + result} target="_blank" rel="noopener noreferrer" className="text-violet-500 font-bold uppercase outline-none text-lg mx-4 inline-block">
+                    <a href={'https://' + result} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-bold uppercase outline-none text-lg mx-4 inline-block">
                         View Link
                     </a>
                 </>

@@ -22,6 +22,10 @@ const SubscribeLink = () => {
                             "name": "How does a YouTube Subscribe Link Work?",
                             "description": "The subscribe link tool gives you a unique link you can use, that when clicked, directs someone to subscribe to your channel. The benefit of this link, is you can put it in your social media posts, blogs, emails and anywhere else, to add an easy subscribe link to your content. Think of it like a subscribe button.",
                             "totalTime": "PT1M",
+                            "tool": {
+                                "@type": "HowToTool",
+                                "name": "Yt-subscri.be - Subscribe Link Tool"
+                            },
                             "step": [{
                                 "@type": "HowToStep",
                                 "text": "Someone clicks your Subscribe Link. This directs them to your YouTube Channel landing page.",
@@ -60,6 +64,9 @@ const SubscribeLink = () => {
                 <hr className="my-4" />
                 <h2 className="text-3xl font-bold mb-4 text-gray-600" id="testLink">How can I test this works?</h2>
                 <p>There may be cases where this link will not work. To test this link, you can open an <a href="https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop" target='_blank' className='text-red-500 underline' rel="noopener noreferrer">"Incogntio Mode" browser</a>. Follow the link in the browser, and you should see a confirmation link when the page is fully loaded.</p>
+                <hr className="my-4" />
+                <h2 className="text-3xl font-bold mb-4 text-gray-600" id="testLink">Is the yt-subscri.be URL safe?</h2>
+                <p>Yes, the yt-subscri.be URL is safe. Any channel URL genereated using this tool, can only direct a user to <a className='text-red-500 underline' href="https://youtube.com" target='_blank' rel="noreferrer noopener">youtube.com</a>.</p>
             </section>  
         </>
     );

@@ -7,7 +7,7 @@ const getChannelUrl = async (url) => {
             params: { url }
         })
     
-        return (data.serverStatus != 200) ? url : 'youtube.com/channel/' + data.channelId;    
+        return (data.serverStatus != 200) ? url : 'yt-subscri.be/c/' + data.channelId;    
     } catch(error) {
         return false;
     }
@@ -39,5 +39,5 @@ export const getSubscribeLink = async (url) => {
 
     if(channelUrl == false || !url.match(/youtube|youtu.be/)) return false;  
 
-    return channelUrl + '?sub_confirmation=1';
+    return channelUrl;
 }

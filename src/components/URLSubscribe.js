@@ -74,7 +74,7 @@ const URLSubscribe = () => {
                 <label htmlFor="channel" className='text-lg font-medium mb-1 block'>What's the YouTube Channel URL?</label>
                 <input type="url" required name="channel" placeholder='https://www.youtube.com/@youtubecreators' className='min-w-full border-2 rounded-md p-4' />
                 <p className="text-gray-400 mt-2 text-sm">A URL should include 'https://' OR 'http://'.</p>
-                <button disabled={loading} type="submit" className='disabled:bg-gray-400 py-4 px-8 my-8 bg-violet-500 text-white outline-none text-lg font-bold uppercase rounded-md'>
+                <button disabled={loading} type="submit" className='disabled:bg-gray-400 py-4 px-8 my-8 bg-blue-500 text-white outline-none text-lg font-bold uppercase rounded-md'>
                     {
                         (loading)
                         ? 'Fetching url...'
@@ -99,7 +99,7 @@ const URLSubscribe = () => {
                     <section className="p-4 rounded-md m-4 bg-slate-700 text-gray-300 cursor-pointer">
                         <h4 className='text-xl my-2 text-green-400'>{result}</h4>
                     </section>   
-                    <button onClick={() => copyUrl()} className="text-violet-500 font-bold uppercase outline-none text-lg mx-4">
+                    <button onClick={() => copyUrl()} className="text-blue-500 font-bold uppercase outline-none text-lg mx-4">
                         {
                             (copied)
                             ? '✔ Link Copied'
@@ -109,7 +109,7 @@ const URLSubscribe = () => {
                             </> 
                         }
                     </button>
-                    <a href={'https://' + result} target="_blank" rel="noopener noreferrer" className="text-violet-500 font-bold uppercase outline-none text-lg mx-4 inline-block">
+                    <a href={'https://' + result} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-bold uppercase outline-none text-lg mx-4 inline-block">
                         View Link
                     </a>
                     <p className="text-gray-400 m-4 text-sm">🧪 You should <a href="/subscribe-link#testLink" className='text-gray-500 underline'>test the link</a> in "Incognito Mode" in your browser.</p>
