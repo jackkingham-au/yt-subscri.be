@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default {
     h1: ({children}) => (
-        <header className='bg-red-500 w-full'>
-            <h1 className='text-white p-8'>{children}</h1>
+        <header className='bg-red-500 rounded-md block'>
+            <h1 className='text-white'>{children}</h1>
         </header>
     ),
     img: (props) => (

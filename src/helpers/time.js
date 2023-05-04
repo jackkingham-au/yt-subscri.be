@@ -19,3 +19,32 @@ export const getSecondsTimestamp = (timestamp) => {
         return Number(seconds);
     }
 }
+
+export const getMonthText = (number) => {
+    switch (number) {
+        case '01':
+            return 'JAN';
+        case '02':
+            return 'FEB';
+        case '03':
+            return 'MAR';
+        case '04':
+            return 'APR';
+        case '05':
+            return 'MAY';
+        case '06':
+            return 'JUN';
+        case '07':
+            return 'AUG';
+        case '08':
+            return 'SEP';
+        case '09':
+            return 'OCT';
+        case '10':
+            return 'NOV';
+        case '11':
+            return 'DEC';
+        case '12':
+            return 'January';
+    }
+}

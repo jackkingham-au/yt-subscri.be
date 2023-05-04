@@ -5,6 +5,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote';
 import mdxComponents from '../../helpers/mdxComponents';
 import Head from 'next/head';
+import { ChevronRight } from 'react-bootstrap-icons';
 
 const Post = ({source, meta, slug}) => {
     const { title, description, date } = meta;
@@ -48,10 +49,13 @@ const Post = ({source, meta, slug}) => {
                     }
                 </script>
             </Head>
-            <section>
-                <a href="/blog" className='text-lg text-blue-500 underline mb-4 w-fit block'>Back to Blog</a>
+            <section className='flex justify-start items-center mb-4'>
+                <a href="/blog" className='text-lg text-red-500 w-fit block underline'>Blog</a>
+                <ChevronRight size={16} className='fill-gray-600 relative top-[2px] mx-1' />
+                <p className="text-lg">{title}</p>
             </section>
-            <article className='prose prose-slate min-w-full lg:min-w-[60%]'>
+            <hr className='w-full my-8' />
+            <article className='prose prose-slate prose-h1:p-24 prose-h1:text-5xl min-w-full'>
                 <MDXRemote { ...source } components={mdxComponents} />
             </article>
         </>
