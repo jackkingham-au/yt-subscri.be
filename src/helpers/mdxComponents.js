@@ -7,7 +7,7 @@ export default {
         </header>
     ),
     img: (props) => (
-        <Image { ...props } width={300} height={300} className="rounded-md" />
+        <img { ...props } width={300} style={{height: 'auto'}} className="rounded-md border-2 border-slate-800" />
     ),
     a: (props) => (
         <a { ...props } target="_blank" rel="noreferrer nooepner" className='underline text-red-500'>{props.children}</a>

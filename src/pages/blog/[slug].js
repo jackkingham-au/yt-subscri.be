@@ -8,7 +8,7 @@ import Head from 'next/head';
 import { ChevronRight } from 'react-bootstrap-icons';
 
 const Post = ({source, meta, slug}) => {
-    const { title, description, date } = meta;
+    const { title, description, date, cover } = meta;
 
     return (
         <>
@@ -16,7 +16,8 @@ const Post = ({source, meta, slug}) => {
                 <meta property="og:title" content={title + ' | yt-subscri.be'} />
                 <meta property='og:type' content='article' />
                 <meta property="og:url" content={'https://yt-subscri.be/blog/' + slug} />
-                <meta property='og:description' content={description} />                
+                <meta property='og:description' content={description} />
+                <meta property='og:image' content={'https://yt-subscri.be/uploads/covers/' + cover} />                
                 <meta name="description" content={description} />
                 <title>{title + ' | yt-subscri.be'}</title>
                 <script type="application/ld+json">

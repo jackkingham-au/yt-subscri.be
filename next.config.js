@@ -4,6 +4,9 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    images: {
+        domains: ['localhost', 'yt-subscri.be'],
+    },
     async redirects() {
         return [
             {

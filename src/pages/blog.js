@@ -32,9 +32,7 @@ const Blog = ({posts}) => {
                                 <div className="flex flex-col md:flex-row justify-between items-start">
                                     <div className="prose prose-slate">
                                         <h2>{meta.title}</h2>   
-                                        <p>{meta.description}</p>
-                                    </div>
-                                    <section className='mt-8 md:mt-0'>
+                                        <hr className='my-4' />
                                         <div className="flex items-center">
                                             <div className="relative flex">
                                                 <Calendar size={32} />
@@ -42,16 +40,12 @@ const Blog = ({posts}) => {
                                             </div>
                                             <h6 className='p-2 whitespace-nowrap'>{getMonthText(month) + ' ' + year}</h6>
                                         </div>
-                                        <div className='my-4'>
-                                            <h5>Written By...</h5>
-                                            <img src="/assets/svg/yt-subscribe-logo.svg" alt="yt-subscribe-logo" className="max-w-[120px] my-2" />
-                                        </div>
-                                    </section>
+                                        <p>{meta.description}</p>
+                                    </div>
+                                    <img src={'uploads/covers/' + meta.cover} alt={meta.cover} className='max-w-[300px] rounded-lg mt-6 md:mt-0'  />
                                 </div>
-                                <hr className="my-6 w-full" />
-                                <a href={'/blog/' + slug} className="w-fit no-underline text-blue-500 my-2 text-lg font-bold uppercase rounded-md flex items-center hover:underline mr-auto">Read More <ArrowRight size={32} className='ml-2' /></a>
+                                <a href={'/blog/' + slug} className="w-fit no-underline text-blue-500 mt-8 text-lg font-bold uppercase rounded-md flex items-center hover:underline mr-auto">Read More <ArrowRight size={32} className='ml-2' /></a>
                             </article>
-                            <hr className='my-8' />
                         </>
                     )
                 })
